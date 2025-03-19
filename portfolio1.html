@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #333;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-photo {
+    width: 160px;
+    height:auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+#hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #00bfa5, #006064);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.hero-content {
+    dispaly: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    text-align: left;
+}
+
+.passport-photo{
+     width:120px;
+     height: 150px;
+     object-fit: cover;
+     border: 3px solid #ffc107;
+     border-radius: 5px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
+}
+   
+@media (max-width: 768px) {
+     .hero-content {
+        flex-direction: column;
+        text-align: center;
+     }
+}
+
+#hero h1 span {
+    color: #ffc107;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ffc107;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ff8f00;
+}
+
+section {
+    padding: 40px 20px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.skill-bar {
+    margin-bottom: 15px;
+}
+
+.skill-bar span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: #00bfa5;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+}
+</style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo"><strong> KA</strong> </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+		<img src="C:\Users\KOUSAR ALI I\Downloads\kousar1.jpg" alt="your photo" class="passport-photo">
+        <h1>Hello, I'm <span>Kousar Ali I</span></h1>
+        <p>An aspiring and enthusiastic BCA student aiming to build a career in web development ,eager to learn and apply creative solutions. </p>
+        <button onclick="scrollToSection('about')">Explore More</button>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="C:\Users\KOUSAR ALI I\Downloads\kousar1.jpg"alt="Your Photo" class="about-photo">
+        <p> <strong>Aspiring web developer with a strong foundation in HTML, CSS, and JavaScript, committed to building responsive and user-friendly website,eager to create dynamic ,engaging efficient web application using modern technologies.And focusing on frontend and backend technologies to deliver impact projects ahead. </strong></p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skill-bar">
+            <span>HTML & CSS</span>
+            <div class="bar"><div class="progress" style="width: 90%;"></div></div>
+        </div>
+        <div class="skill-bar">
+            <span>JavaScript</span>
+            <div class="bar"><div class="progress" style="width: 80%;"></div></div>
+        </div>
+        <div class="skill-bar">
+            <span>React</span>
+            <div class="bar"><div class="progress" style="width: 75%;"></div></div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-card">
+            <h3>Landing page </h3>
+            <p>A landing page is a standalone web page designed for marketing purposes .</p>
+            <p> used languages like html,css</p>
+            <a href="#">View Project</a>
+        </div>
+        <div class="project-card">
+            <h3>A tribute page </h3>
+            <p>A tribute page is a web page dedicated to honoring and celebrating a person, group, or cause. It typically includes information, images, achievements, and personal reflections to show respect and admiration.</p>
+<p>used languages like html,css</p>
+            <a href="#">View Project</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: kousara318@gmail.com</p>
+        <p>Phone: 8618230735</p>
+        <p><a href="C:\Users\KOUSAR ALI I\Downloads\KOUSAR-ALI-ISTAQ-FlowCV-Resume-20250313 (1).pdf" download>Download Resume</a></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Kousar Ali I. All rights reserved </p>
+    </footer>
+</body>
+</html>
